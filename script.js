@@ -33,16 +33,10 @@ async function fetchWeather(url){
     let weatherDesc = response.weather[0].description;
     let temperature = Math.floor(response.main.temp);
 
-    let image = `${weatherMain}.png`
-    console.log(image)
-
-
     weather.innerHTML = `
     <h2>${cityName}</h2>
     <h3>${weatherDesc}</h3>
-    <img src="img/${image}" alt="icon">
-    <img src="https://theogilardo.github.io/weather-api/img/${image}.png" alt="icon">
-    <img src="img/clear1.png" alt="icon">
+    <img src= "http://openweathermap.org/img/w/${response.weather[0].icon}.png" alt="icon">
     <h1>${temperature}°C</h1>
     `
     weather.classList.remove('hidden')
