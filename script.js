@@ -47,6 +47,7 @@ async function fetchWeather(url){
     const imgDOM = document.querySelector('#weather > img')
     imgDOM.src = image
 
+
   } catch (error) {
     weather.classList.add('hidden')
     alert('City not found!')
