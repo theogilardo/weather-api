@@ -33,20 +33,18 @@ async function fetchWeather(url){
     let weatherDesc = response.weather[0].description;
     let temperature = Math.floor(response.main.temp);
 
-    let image = `img/${weatherMain}.png`
+    let image = `${weatherMain}.png`
     console.log(image)
+
 
     weather.innerHTML = `
     <h2>${cityName}</h2>
     <h3>${weatherDesc}</h3>
-    <img alt="icon">
+    <img src="img/${image}" alt="icon">
+    <img src="https://theogilardo.github.io/weather-api/img/${image}.png" alt="icon">
     <h1>${temperature}°C</h1>
     `
     weather.classList.remove('hidden')
-
-    const imgDOM = document.querySelector('#weather > img')
-    imgDOM.src = image
-
 
   } catch (error) {
     weather.classList.add('hidden')
