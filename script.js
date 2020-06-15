@@ -36,7 +36,7 @@ async function fetchWeather(url){
     weather.innerHTML = `
     <h2>${cityName}</h2>
     <h3>${weatherDesc}</h3>
-    <img src="./img/${weatherMain}.png" alt="icon">
+    <img src="img/${weatherMain}.png" alt="icon">
     <h1>${temperature}°C</h1>
     `
     weather.classList.remove('hidden')
