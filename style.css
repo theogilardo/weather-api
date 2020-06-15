@@ -55,6 +55,7 @@ form {
 
 input:focus {
   outline: none;
+  transform: translateX(4px);
 }
 
 
