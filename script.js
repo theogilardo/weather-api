@@ -42,6 +42,7 @@ async function fetchWeather(url){
     <h3>${weatherDesc}</h3>
     <img src="img/${image}" alt="icon">
     <img src="https://theogilardo.github.io/weather-api/img/${image}.png" alt="icon">
+    <img src="img/clear1.png" alt="icon">
     <h1>${temperature}°C</h1>
     `
     weather.classList.remove('hidden')
